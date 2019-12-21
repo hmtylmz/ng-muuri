@@ -8,7 +8,7 @@ import { NgMuuriItemComponent } from '../ng-muuri-item/ng-muuri-item.component';
 @Component({
   selector: 'ng-muuri-grid',
   templateUrl: './ng-muuri-grid.component.html',
-  styleUrls: ['./ng-muuri-grid.component.css'],
+  styleUrls: ['./ng-muuri-grid.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NgMuuriGridComponent implements AfterViewInit {

@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, ElementRef, HostBinding, OnInit } f
 @Component({
   selector: 'ng-muuri-item',
   templateUrl: './ng-muuri-item.component.html',
-  styleUrls: ['./ng-muuri-item.component.css'],
+  styleUrls: ['./ng-muuri-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NgMuuriItemComponent implements OnInit {
