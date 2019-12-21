@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgMuuriComponent } from './ng-muuri.component';
+import { NgMuuriGridComponent } from './ng-muuri-grid.component';
 
-describe('NgMuuriComponent', () => {
-  let component: NgMuuriComponent;
-  let fixture: ComponentFixture<NgMuuriComponent>;
+describe('NgMuuriGridComponent', () => {
+  let component: NgMuuriGridComponent;
+  let fixture: ComponentFixture<NgMuuriGridComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgMuuriComponent ]
+      declarations: [ NgMuuriGridComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgMuuriComponent);
+    fixture = TestBed.createComponent(NgMuuriGridComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

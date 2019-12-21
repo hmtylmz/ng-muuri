@@ -1,7 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 
-declare let Muuri: any;
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
