@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 
 declare let Muuri: any;
 
@@ -8,7 +8,7 @@ declare let Muuri: any;
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit {
-  title = 'ng-muuri';
+  title = 'angular-muuri';
   elements = [...Array(10).keys()];
 
   ngAfterViewInit(): void {
