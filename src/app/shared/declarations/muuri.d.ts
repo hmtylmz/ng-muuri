@@ -1,5 +1,5 @@
 declare class Muuri {
-  constructor(selector: string, options?: MuuriOptions);
+  constructor(selector: string | HTMLElement, options?: MuuriOptions);
 }
 
 declare class MuuriOptions {

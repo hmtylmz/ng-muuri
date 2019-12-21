@@ -1,15 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import {
+    AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, HostBinding, Input, OnInit
+} from '@angular/core';
 
 @Component({
   selector: 'ng-muuri-grid',
   templateUrl: './ng-muuri-grid.component.html',
-  styleUrls: ['./ng-muuri-grid.component.css']
+  styleUrls: ['./ng-muuri-grid.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NgMuuriGridComponent implements OnInit {
+export class NgMuuriGridComponent implements AfterViewInit {
+  @Input('options') options: MuuriOptions;
+  @HostBinding('class') class = 'ng-muuri-grid';
 
-  constructor() { }
+  hostElement: HTMLElement;
 
-  ngOnInit() {
+  grid: Muuri;
+
+  constructor(private elementRef: ElementRef) {
+    this.hostElement = elementRef.nativeElement;
   }
 
+  ngAfterViewInit() {
+    this.grid = new Muuri(this.hostElement, this.options);
+  }
 }
+
