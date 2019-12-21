@@ -1,5 +1,7 @@
 declare class Muuri {
   constructor(selector: string | HTMLElement, options?: MuuriOptions);
+  add(items: Array<HTMLElement>): void;
+  remove(items: Array<HTMLElement>): void;
 }
 
 declare class MuuriOptions {

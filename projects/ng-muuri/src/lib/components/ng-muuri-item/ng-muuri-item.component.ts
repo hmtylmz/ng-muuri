@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, HostBinding, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, HostBinding, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ng-muuri-item',
@@ -9,7 +9,11 @@ import { ChangeDetectionStrategy, Component, HostBinding, OnInit } from '@angula
 export class NgMuuriItemComponent implements OnInit {
   @HostBinding('class') class = 'ng-muuri-item';
 
-  constructor() { }
+  hostElement: HTMLElement;
+
+  constructor(private elementRef: ElementRef) {
+    this.hostElement = this.elementRef.nativeElement;
+  }
 
   ngOnInit() {
   }

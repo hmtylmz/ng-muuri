@@ -13,8 +13,8 @@ export class AppComponent implements AfterViewInit {
     layout: {
       fillGaps: false,
       horizontal: false,
-      alignRight: true,
-      alignBottom: true,
+      alignRight: false,
+      alignBottom: false,
       rounding: true
     },
 
@@ -54,5 +54,11 @@ export class AppComponent implements AfterViewInit {
   };
 
   ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.elements.push(20);
+      setTimeout(() => {
+        this.elements.shift();
+      }, 1000);
+    }, 1000);
   }
 }
