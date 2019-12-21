@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-muuri": [
+        "dist/ng-muuri"
+      ],
+      "ng-muuri/*": [
+        "dist/ng-muuri/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

@@ -127,6 +127,41 @@
           }
         }
       }
+    },
+    "ng-muuri": {
+      "projectType": "library",
+      "root": "projects/ng-muuri",
+      "sourceRoot": "projects/ng-muuri/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-muuri/tsconfig.lib.json",
+            "project": "projects/ng-muuri/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-muuri/src/test.ts",
+            "tsConfig": "projects/ng-muuri/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-muuri/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-muuri/tsconfig.lib.json",
+              "projects/ng-muuri/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "angular-muuri"
 }
